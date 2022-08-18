@@ -1,0 +1,57 @@
+body{
+    background-color: #F0F2F5;
+}
+
+/*ID contem a div dp texto principal*/
+#txt_principal{
+    padding-left: 5%;
+}
+h1{
+    color: blue;
+    margin-top: 25%;
+}
+
+P{
+    text-align: center;
+}
+
+input{
+    height: 5vh;
+}
+input::placeholder{
+    font-size: 15px;
+    text-align: center;
+}
+
+button{
+    width: 100%;
+}
+
+form{
+    margin-top: 40%;
+    border-radius: 10px;
+    background-color: white;
+    padding: 30px;
+}
+
+hr{
+    color:black;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+a{
+    position: relative;
+    left: 35%;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+/* esse ID se refere ao botão "Criar nova conta" */
+#btn1{
+    position: relative;
+    left: 25%;
+    width: 50%;
+}

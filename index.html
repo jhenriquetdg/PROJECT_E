@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- conexão bootstrap via cnd -> css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- conexão com css -->
+    <link rel="stylesheet" href="/app/css/index.css">
+    <title>nomedaloja</title> 
+</head>
+<body>
+    <!-- Nome da loja e descrição -->
+    <main>
+        <div class="container">
+            <!-- Nome da loja e pequena descrição -->
+            <div class="row">
+                <div class="col col-8" id="txt_principal">
+                    <h1>Nome_da_loja</h1>
+                    <h2>pequena descrição da loja etec... </h2>
+                </div>
+
+            <!-- Formulario -->
+                <div class="col">
+                    <form>
+                        <div class="mb-3">
+                          <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                          <input type="password" class="form-control" id="senha" name="senha" placeholder="Password">
+                        </div>
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input">
+                          <label class="form-check-label" for="exampleCheck1">Deseja salvar email e senha?</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                        <a href="#">Esqueçeu a senha?</a>
+                        <hr>
+                        <button type="" class="btn btn-success" id="btn1">Criar nova conta</button>
+                    </form>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicinma</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- conexão bootstrap via cnd -> javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
