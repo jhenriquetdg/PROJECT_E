@@ -1,27 +1,38 @@
-const { createClient } = require('@supabase/supabase-js') 
-
-const supabase = createClient(
-  'https://ynbfowsnlrzjugqclbkz.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InluYmZvd3NubHJ6anVncWNsYmt6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjA3MTM1NTgsImV4cCI6MTk3NjI4OTU1OH0.XrpmZzdAAEl5tPDXkFmR_Nh9QZOSoL9xG58cfUzLs4o'
-)
+const supabase = require("../database/config");
 
 class ProductsController{
     
-    static async addProduct(req, res){
-        const { name , description, price } = req.body;
-        try {
-            const allProducts = await supabase.from('products').insert([{
-                name: name,
-                description: description,
-                price: price
-            }]);
-            res.status(200).json(allProducts);
-        } catch (error) {
-            res.status(500).json(error.message);
-        }
+    async listProducts(){
+        await supabase.from('products')
+            .select('*')
     }
 
+    async addProducts(name, description, price){
+        const nameProduct = name;
+        const descriptionProduct = description;
+        const priceProduct = price;
+        
+        await supabase.from('products')
+            .insert([{name: nameProduct, description: descriptionProduct , price: priceProduct}])
+    }
+    
+    async deleteProduct(id){
+        const idDeleted = id;
+    
+        await supabase.from('products')
+            .delete()
+            .match({id: idDeleted})  
+    }
 
+    async updateProducts(id, name, description, price){
+        const nameProduct = name;
+        const descriptionProduct = description;
+        const priceProduct = price;
+
+        await supabase.from('products')
+            .update({name: nameProduct, description: descriptionProduct , price: priceProduct})
+            .match({id: id})
+    }
 }
 
-module.exports = ProductsController;
+module.exports = ProductsController
